@@ -21,7 +21,7 @@ const HomeCard = () => {
 
   return (
       <div className="w-[90%] mx-auto bg-[#f5f7fa]">
-          <div className="flex justify-between items-center">
+          <div className="flex  md:flex-row flex-col justify-between items-center">
               <h1 className="text-[grey] text-[40px] cursor-pointer">PostDoc</h1>
       <form>
         <input
@@ -33,7 +33,7 @@ const HomeCard = () => {
         />
       </form>
           </div>
-      <div className="flex flex-wrap gap-8 mt-[20px]">
+      <div className="flex md:flex-row flex-wrap flex-col gap-8 mt-[20px]">
         {users
           .filter((user) => {
             return search.toLowerCase() === ""
@@ -42,7 +42,7 @@ const HomeCard = () => {
           })
           .map((user) => (
             <div
-              className="mx-auto w-[40%] p-[8px] bg-[white] py-[30px] rounded-[10px] shadow-xl"
+              className="mx-auto w-[80%] md:w-[40%] p-[8px] bg-[white] py-[30px] rounded-[10px] shadow-xl"
               key={user.id}
             >
               <h1 className="text-[grey] text-[18px] text-center">
